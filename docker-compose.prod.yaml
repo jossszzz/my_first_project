@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    image: jos0622/my_first_project:lasted
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./back/:/usr/src/back/
+    ports:
+      - 8000:8000
+    env_file:
+      - ./back/.env.dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
