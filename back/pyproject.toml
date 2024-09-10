@@ -6,7 +6,7 @@ authors = ["brian.gomez1 <brian.gomez@softlabperu.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 django = "^5.1.1"
 ruff = "^0.6.4"
 
