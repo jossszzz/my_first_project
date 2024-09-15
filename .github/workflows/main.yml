@@ -33,3 +33,12 @@ jobs:
       - name: Publicar la imagen en Docker Hub
         run: |
           docker push ${{ vars.DOCKERHUB_USERNAME }}/my_first_project:latest
+
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: whoami
