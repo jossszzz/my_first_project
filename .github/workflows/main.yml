@@ -18,15 +18,10 @@ jobs:
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-
-      - name: Listar 
+           
+      - name: Configurar Docker Compose
         run: |
-          pwd 
-
-      - name: Run docker-compose
-        uses: hoverkraft-tech/compose-action@v2.0.1
-        with:
-          compose-file: "./docker/docker-compose.prod.yaml"
+          docker compose -f docker-compose.yml build
 
       - name: Etiquetar la imagen de Docker
         run: |
