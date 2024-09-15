@@ -41,4 +41,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: cd /home/ubuntu/my_first_project && git pull 
+          script: | 
+            cd /home/ubuntu/my_first_project 
+            git pull 
+            
