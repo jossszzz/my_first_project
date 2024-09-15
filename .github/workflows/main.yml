@@ -21,7 +21,7 @@ jobs:
 
       - name: Configurar Docker Compose
         run: |
-          docker compose -f docker-compose.prod.yaml build
+          docker compose -f ./docker-compose.prod.yaml build
 
       - name: Etiquetar la imagen de Docker
         run: |
